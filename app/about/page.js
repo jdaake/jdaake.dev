@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'About | Jordan Daake',
@@ -245,10 +246,16 @@ export default function About() {
               WHAT <span className='gold-text'>MATTERS</span>
             </h2>
 
-            {/* Family photo placeholder */}
+            {/* Family photo */}
             <div className='max-w-md mx-auto mb-8'>
-              <div className='aspect-[4/3] bg-dark-800 rounded-lg border border-dark-700 flex items-center justify-center'>
-                <span className='text-white/30'>Family Photo</span>
+              <div className='rounded-lg overflow-hidden'>
+                <Image
+                  src='/images/family.jpg'
+                  alt='Jordan Daake with family'
+                  width={600}
+                  height={450}
+                  className='w-full h-auto'
+                />
               </div>
             </div>
 
