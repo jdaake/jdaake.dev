@@ -172,16 +172,14 @@ export default function Engineering() {
                   AWS.
                 </p>
                 <div className='flex flex-wrap gap-2'>
-                  {['Angular', 'TypeScript', '.NET', 'AWS', 'PostgreSQL'].map(
-                    (tech) => (
-                      <span
-                        key={tech}
-                        className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                      >
-                        {tech}
-                      </span>
-                    )
-                  )}
+                  {['Angular', 'TypeScript', 'AWS', 'Ruby'].map((tech) => (
+                    <span
+                      key={tech}
+                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
