@@ -109,7 +109,7 @@ export default function Coaching() {
                 posers punch above their weight class.
               </p>
               <p>
-                Currently preparing for Master's Nationals 2025 with plans to
+                Currently preparing for Master's Nationals 2026 with plans to
                 earn my IFBB Pro card. I coach because I want to share what I've
                 learned - the details that took me years to figure out.
               </p>
