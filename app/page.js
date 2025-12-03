@@ -287,7 +287,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href='https://instagram.com/jdaake'
+                  href='https://instagram.com/j.daake'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-white/50 hover:text-gold-500 transition-colors'
