@@ -207,7 +207,7 @@ export default function Engineering() {
               >
                 Connect on LinkedIn
               </a>
-              <a href='/resume.pdf' className='btn-outline'>
+              <a href='/resume/resume.pdf' download className='btn-outline'>
                 Download Resume
               </a>
             </div>
