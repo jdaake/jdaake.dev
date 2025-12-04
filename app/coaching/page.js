@@ -97,9 +97,9 @@ export default function Coaching() {
             </h2>
             <div className='space-y-6 text-white/70 leading-relaxed'>
               <p>
-                I've been a competitive classic physique bodybuilder for over a
-                decade. I've stood on national stages, earned multiple top-5
-                finishes, and learned what separates good physiques from winning
+                I've been a competitive bodybuilder for over a decade. I've
+                stood on national stages, earned multiple top-5 finishes, and
+                learned what separates good physiques from winning
                 presentations.
               </p>
               <p>
