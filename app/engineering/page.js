@@ -91,9 +91,7 @@ export default function Engineering() {
                     <h3 className='font-display text-2xl text-white mb-1'>
                       INVENE
                     </h3>
-                    <p className='text-gold-500'>
-                      Software Engineer (Contract)
-                    </p>
+                    <p className='text-gold-500'>Software Engineer</p>
                   </div>
                   <span className='text-white/50 text-sm'>
                     August 2025 - Present
@@ -131,9 +129,13 @@ export default function Engineering() {
                     <h3 className='font-display text-2xl text-white mb-1'>
                       ORION
                     </h3>
-                    <p className='text-gold-500'>Software Engineer</p>
+                    <p className='text-gold-500'>
+                      Software Engineer | Software Developer II | SQL Developer
+                    </p>
                   </div>
-                  <span className='text-white/50 text-sm'>Previous</span>
+                  <span className='text-white/50 text-sm'>
+                    September 2023 - May 2025 | September 2018 - March 2022
+                  </span>
                 </div>
                 <p className='text-white/70 leading-relaxed mb-6'>
                   Built and maintained enterprise software solutions using .NET
@@ -163,7 +165,9 @@ export default function Engineering() {
                     </h3>
                     <p className='text-gold-500'>Software Engineer</p>
                   </div>
-                  <span className='text-white/50 text-sm'>Previous</span>
+                  <span className='text-white/50 text-sm'>
+                    March 2022 - August 2024
+                  </span>
                 </div>
                 <p className='text-white/70 leading-relaxed mb-6'>
                   Developed features for sports technology platforms serving
