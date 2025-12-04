@@ -38,10 +38,16 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Photo placeholder */}
+              {/* Headshot */}
               <div className='relative'>
-                <div className='aspect-[4/5] bg-dark-800 rounded-lg border border-dark-700 flex items-center justify-center'>
-                  <span className='text-white/30'>Photo</span>
+                <div className='aspect-[4/5] rounded-lg overflow-hidden'>
+                  <Image
+                    src='/images/headshot.jpg'
+                    alt='Jordan Daake headshot'
+                    width={500}
+                    height={625}
+                    className='w-full h-full object-cover'
+                  />
                 </div>
                 {/* Decorative element */}
                 <div className='absolute -bottom-4 -right-4 w-full h-full border-2 border-gold-500/20 rounded-lg -z-10' />
