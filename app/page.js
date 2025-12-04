@@ -99,12 +99,12 @@ export default function Home() {
 
                   <p className='text-white/60 mb-6 flex-grow'>
                     Building scalable cloud solutions in healthcare tech.
-                    Specializing in .NET, AWS/Azure, and AI-powered automation
-                    systems.
+                    Specializing in C#/.NET, Python, Javascript, AWS/Azure, and
+                    AI-powered automation systems.
                   </p>
 
                   <div className='flex items-center text-gold-500 text-sm font-medium group-hover:gap-3 gap-2 transition-all'>
-                    View Portfolio
+                    View My Experience
                     <svg
                       className='w-4 h-4'
                       fill='none'
