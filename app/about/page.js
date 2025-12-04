@@ -87,22 +87,22 @@ export default function About() {
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
               {/* Photo grid */}
               <div className='grid grid-cols-2 gap-4'>
-                <div className='aspect-[3/4] bg-dark-800 rounded-lg overflow-hidden'>
+                <div className='rounded-lg overflow-hidden'>
                   <Image
                     src='/images/favorite.jpg'
                     alt='Jordan Daake stage shot'
                     width={400}
-                    height={533}
-                    className='w-full h-full object-cover'
+                    height={600}
+                    className='w-full h-auto'
                   />
                 </div>
-                <div className='aspect-[3/4] bg-dark-800 rounded-lg overflow-hidden mt-8'>
+                <div className='rounded-lg overflow-hidden mt-8'>
                   <Image
                     src='/images/rear_double.jpg'
                     alt='Jordan Daake rear double bicep pose'
                     width={400}
-                    height={533}
-                    className='w-full h-full object-cover'
+                    height={600}
+                    className='w-full h-auto'
                   />
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function About() {
                   <p>
                     Classic Physique competitor. 6'3", competing at the 239 lb
                     cap. Multiple top-5 finishes at national-level shows.
-                    Currently preparing for Master's Nationals in July 2025 with
+                    Currently preparing for Master's Nationals in July 2026 with
                     one goal: earn my IFBB Pro card.
                   </p>
                   <p>
@@ -259,14 +259,14 @@ export default function About() {
             </h2>
 
             {/* Family photo */}
-            <div className='max-w-md mx-auto mb-8'>
-              <div className='rounded-lg overflow-hidden'>
+            <div className='max-w-2xl mx-auto mb-8'>
+              <div className='aspect-[4/3] rounded-lg overflow-hidden'>
                 <Image
                   src='/images/family.jpg'
                   alt='Jordan Daake with family'
-                  width={600}
-                  height={450}
-                  className='w-full h-auto'
+                  width={800}
+                  height={600}
+                  className='w-full h-full object-cover'
                 />
               </div>
             </div>
