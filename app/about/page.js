@@ -87,11 +87,23 @@ export default function About() {
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
               {/* Photo grid */}
               <div className='grid grid-cols-2 gap-4'>
-                <div className='aspect-[3/4] bg-dark-800 rounded-lg border border-dark-700 flex items-center justify-center'>
-                  <span className='text-white/30 text-sm'>Stage Shot</span>
+                <div className='aspect-[3/4] bg-dark-800 rounded-lg overflow-hidden'>
+                  <Image
+                    src='/images/favorite.jpg'
+                    alt='Jordan Daake stage shot'
+                    width={400}
+                    height={533}
+                    className='w-full h-full object-cover'
+                  />
                 </div>
-                <div className='aspect-[3/4] bg-dark-800 rounded-lg border border-dark-700 flex items-center justify-center mt-8'>
-                  <span className='text-white/30 text-sm'>Stage Shot</span>
+                <div className='aspect-[3/4] bg-dark-800 rounded-lg overflow-hidden mt-8'>
+                  <Image
+                    src='/images/rear_double.jpg'
+                    alt='Jordan Daake rear double bicep pose'
+                    width={400}
+                    height={533}
+                    className='w-full h-full object-cover'
+                  />
                 </div>
               </div>
 
