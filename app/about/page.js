@@ -7,15 +7,6 @@ export const metadata = {
 };
 
 export default function About() {
-  const sneakerHighlights = [
-    'Air Jordan 1 Chicago (1985)',
-    'Air Jordan 3 Black Cement',
-    'Air Jordan 4 Bred',
-    'Air Jordan 11 Concord',
-    'Air Jordan 1 Royal',
-    'Air Jordan 5 Fire Red',
-  ];
-
   return (
     <>
       <Navigation />
@@ -204,61 +195,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Sneaker Collection */}
-        <section className='py-24 lg:py-32'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <div className='grid lg:grid-cols-2 gap-12 items-center'>
-              <div>
-                <h2 className='font-display text-4xl tracking-wide text-white mb-6'>
-                  THE <span className='gold-text'>COLLECTION</span>
-                </h2>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  80+ pairs of Jordans and counting. It started as a kid who
-                  couldn't afford them, turned into an adult who could, and
-                  became a genuine appreciation for the design, the history, and
-                  the culture.
-                </p>
-                <p className='text-white/70 leading-relaxed mb-8'>
-                  I'm drawn to the OG colorways - the ones that started it all.
-                  There's something about owning a piece of sneaker history that
-                  never gets old.
-                </p>
-
-                {/* Highlight pairs */}
-                <div>
-                  <h3 className='text-white/50 text-sm uppercase tracking-wider mb-4'>
-                    Some Favorites
-                  </h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {sneakerHighlights.map((shoe) => (
-                      <span
-                        key={shoe}
-                        className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-sm'
-                      >
-                        {shoe}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Sneaker photo grid */}
-              <div className='grid grid-cols-3 gap-3'>
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div
-                    key={i}
-                    className='aspect-square bg-dark-800 rounded-lg border border-dark-700 flex items-center justify-center'
-                  >
-                    <span className='text-white/20 text-xs'>Sneaker</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Family */}
-        <section className='py-24 lg:py-32 bg-dark-800/30'>
+        <section className='py-24 lg:py-32'>
           <div className='max-w-4xl mx-auto px-6 lg:px-8 text-center'>
             <h2 className='font-display text-4xl tracking-wide text-white mb-6'>
               WHAT <span className='gold-text'>MATTERS</span>
@@ -286,7 +224,7 @@ export default function About() {
         </section>
 
         {/* Connect */}
-        <section className='py-24 lg:py-32'>
+        <section className='py-24 lg:py-32 bg-dark-800/30'>
           <div className='max-w-4xl mx-auto px-6 lg:px-8 text-center'>
             <h2 className='font-display text-4xl tracking-wide text-white mb-6'>
               LET'S <span className='gold-text'>CONNECT</span>
