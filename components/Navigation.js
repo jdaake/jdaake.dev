@@ -9,7 +9,7 @@ export default function Navigation() {
   const navItems = [
     { name: 'Engineering', href: '/engineering' },
     { name: 'Coaching', href: '/coaching' },
-    // { name: 'Photography', href: '/photography' },
+    { name: 'Photography', href: '/photography' },
     { name: 'About', href: '/about' },
   ];
 
