@@ -35,9 +35,9 @@ export default function Engineering() {
                   'SQL',
                   'Angular',
                   'LLM/AI',
+                  'Cloud Architecture',
                   'Healthcare Tech',
                   'FinTech',
-                  'Cloud Architecture',
                 ].map((skill) => (
                   <span
                     key={skill}
