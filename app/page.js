@@ -170,62 +170,62 @@ export default function Home() {
                 </div>
               </Link>
 
-              {/* Photography Card */}
-              <Link href='/photography' className='group'>
-                <div className='card card-hover p-8 h-full flex flex-col'>
-                  {/* Icon */}
-                  <div className='w-14 h-14 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition-colors'>
-                    <svg
-                      className='w-7 h-7 text-gold-500'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={1.5}
-                        d='M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z'
-                      />
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={1.5}
-                        d='M15 13a3 3 0 11-6 0 3 3 0 016 0z'
-                      />
-                    </svg>
-                  </div>
+        //       {/* Photography Card */}
+        //       <Link href='/photography' className='group'>
+        //         <div className='card card-hover p-8 h-full flex flex-col'>
+        //           {/* Icon */}
+        //           <div className='w-14 h-14 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition-colors'>
+        //             <svg
+        //               className='w-7 h-7 text-gold-500'
+        //               fill='none'
+        //               stroke='currentColor'
+        //               viewBox='0 0 24 24'
+        //             >
+        //               <path
+        //                 strokeLinecap='round'
+        //                 strokeLinejoin='round'
+        //                 strokeWidth={1.5}
+        //                 d='M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z'
+        //               />
+        //               <path
+        //                 strokeLinecap='round'
+        //                 strokeLinejoin='round'
+        //                 strokeWidth={1.5}
+        //                 d='M15 13a3 3 0 11-6 0 3 3 0 016 0z'
+        //               />
+        //             </svg>
+        //           </div>
 
-                  <h3 className='font-display text-2xl tracking-wide text-white mb-3'>
-                    PHOTOGRAPHY
-                  </h3>
+        //           <h3 className='font-display text-2xl tracking-wide text-white mb-3'>
+        //             PHOTOGRAPHY
+        //           </h3>
 
-                  <p className='text-white/60 mb-6 flex-grow'>
-                    Capturing authentic moments and powerful imagery. Available
-                    for portraits, fitness, and event photography.
-                  </p>
+        //           <p className='text-white/60 mb-6 flex-grow'>
+        //             Capturing authentic moments and powerful imagery. Available
+        //             for portraits, fitness, and event photography.
+        //           </p>
 
-                  <div className='flex items-center text-gold-500 text-sm font-medium group-hover:gap-3 gap-2 transition-all'>
-                    See The Work
-                    <svg
-                      className='w-4 h-4'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M17 8l4 4m0 0l-4 4m4-4H3'
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
+        //           <div className='flex items-center text-gold-500 text-sm font-medium group-hover:gap-3 gap-2 transition-all'>
+        //             See The Work
+        //             <svg
+        //               className='w-4 h-4'
+        //               fill='none'
+        //               stroke='currentColor'
+        //               viewBox='0 0 24 24'
+        //             >
+        //               <path
+        //                 strokeLinecap='round'
+        //                 strokeLinejoin='round'
+        //                 strokeWidth={2}
+        //                 d='M17 8l4 4m0 0l-4 4m4-4H3'
+        //               />
+        //             </svg>
+        //           </div>
+        //         </div>
+        //       </Link>
+        //     </div>
+        //   </div>
+        // </section>
 
         {/* About Teaser */}
         <section className='py-24 lg:py-32'>
