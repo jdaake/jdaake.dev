@@ -33,7 +33,7 @@ export default function About() {
               <div className='relative'>
                 <div className='aspect-[4/5] rounded-lg overflow-hidden'>
                   <Image
-                    src='/images/headshot.jpg'
+                    src='/images/headshot2.jpg'
                     alt='Jordan Daake headshot'
                     width={500}
                     height={625}
