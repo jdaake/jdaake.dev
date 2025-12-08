@@ -130,7 +130,8 @@ export default function Engineering() {
                       ORION
                     </h3>
                     <p className='text-gold-500'>
-                      Software Engineer | Software Developer II | SQL Developer
+                      Software Engineer | Software Developer II | Security &
+                      Performance Engineer |SQL Developer
                     </p>
                   </div>
                   <span className='text-white/50 text-sm'>
