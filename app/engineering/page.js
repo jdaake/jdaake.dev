@@ -131,7 +131,7 @@ export default function Engineering() {
                     </h3>
                     <p className='text-gold-500'>
                       Software Engineer | Software Developer II | Security &
-                      Performance Engineer |SQL Developer
+                      Performance Engineer | SQL Developer
                     </p>
                   </div>
                   <span className='text-white/50 text-sm'>
