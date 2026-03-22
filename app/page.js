@@ -34,7 +34,7 @@ export default function Home() {
             {/* Brief intro */}
             <p className='font-body text-white/70 text-lg max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-slide-up animate-delay-300'>
               Building scalable software by day. Helping athletes own the stage
-              by night. Capturing moments in between.
+              by night.
             </p>
 
             {/* CTA Buttons */}
@@ -66,13 +66,13 @@ export default function Home() {
                 WHAT I <span className='gold-text'>DO</span>
               </h2>
               <p className='text-white/50 max-w-xl mx-auto'>
-                Three disciplines, one philosophy: pursue excellence through
+                Two disciplines, one philosophy: pursue excellence through
                 discipline, continuous learning, and attention to detail.
               </p>
             </div>
 
             {/* Cards Grid */}
-            <div className='grid md:grid-cols-3 gap-6 lg:gap-8'>
+            <div className='grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto'>
               {/* Engineering Card */}
               <Link href='/engineering' className='group'>
                 <div className='card card-hover p-8 h-full flex flex-col'>
@@ -170,10 +170,9 @@ export default function Home() {
                 </div>
               </Link>
 
-              {/* Photography Card */}
+              {/* Photography Card — hidden until photos are added
               <Link href='/photography' className='group'>
                 <div className='card card-hover p-8 h-full flex flex-col'>
-                  {/* Icon */}
                   <div className='w-14 h-14 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition-colors'>
                     <svg
                       className='w-7 h-7 text-gold-500'
@@ -223,6 +222,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
+              */}
             </div>
           </div>
         </section>

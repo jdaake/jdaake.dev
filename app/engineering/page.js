@@ -35,7 +35,10 @@ export default function Engineering() {
                   'SQL',
                   'Angular',
                   'LLM/AI',
+                  'React Native',
+                  'Next.js',
                   'Cloud Architecture',
+                  'Data Engineering',
                   'Healthcare Tech',
                   'FinTech',
                 ].map((skill) => (
@@ -84,6 +87,89 @@ export default function Engineering() {
             </h2>
 
             <div className='space-y-8'>
+              {/* PhysiqueIQ */}
+              <div className='card p-8'>
+                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
+                  <div>
+                    <h3 className='font-display text-2xl text-white mb-1'>
+                      PHYSIQUEIQ.AI
+                    </h3>
+                    <p className='text-gold-500'>Founder & Solo Engineer</p>
+                  </div>
+                  <span className='text-white/50 text-sm'>
+                    March 2026 - Present
+                  </span>
+                </div>
+                <p className='text-white/70 leading-relaxed mb-6'>
+                  Building an AI-powered physique analysis platform for
+                  competitive bodybuilders and coaches. Solo-engineered the full
+                  stack: two web apps, two mobile apps, 23 serverless Lambda
+                  handlers, and full AWS infrastructure. Fine-tuning Llama 3.2
+                  Vision 11B on 8,269 labeled competition photos across 10 NPC
+                  divisions.
+                </p>
+                <div className='flex flex-wrap gap-2'>
+                  {[
+                    'Next.js',
+                    'React Native',
+                    'TypeScript',
+                    'Python',
+                    'AWS CDK',
+                    'DynamoDB',
+                    'Lambda',
+                    'SageMaker',
+                    'Llama 3.2 Vision',
+                    'Stripe',
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navitus */}
+              <div className='card p-8'>
+                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
+                  <div>
+                    <h3 className='font-display text-2xl text-white mb-1'>
+                      NAVITUS HEALTH SOLUTIONS
+                    </h3>
+                    <p className='text-gold-500'>Senior Software Engineer</p>
+                  </div>
+                  <span className='text-white/50 text-sm'>
+                    February 2026 - Present
+                  </span>
+                </div>
+                <p className='text-white/70 leading-relaxed mb-6'>
+                  Building event-driven ETL pipelines for pharmacy formulary
+                  data processing. Designing data ingestion, enrichment, and
+                  delivery systems that handle drug formulary data across the
+                  RxFlex integration platform.
+                </p>
+                <div className='flex flex-wrap gap-2'>
+                  {[
+                    'C#/.NET',
+                    'AWS CDK',
+                    'EventBridge',
+                    'Lambda',
+                    'S3',
+                    'Aurora PostgreSQL',
+                    'Data Engineering',
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {/* Invene */}
               <div className='card p-8'>
                 <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
@@ -94,7 +180,7 @@ export default function Engineering() {
                     <p className='text-gold-500'>Software Engineer</p>
                   </div>
                   <span className='text-white/50 text-sm'>
-                    August 2025 - Present
+                    August 2025 - January 2026
                   </span>
                 </div>
                 <p className='text-white/70 leading-relaxed mb-6'>

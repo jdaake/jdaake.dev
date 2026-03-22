@@ -2,8 +2,8 @@ import './globals.css'
 
 export const metadata = {
   title: 'Jordan Daake | Engineer • Coach • Creator',
-  description: 'Software Engineer, Posing Coach, and Photographer. Building software, building physiques, building things that matter.',
-  keywords: ['software engineer', 'posing coach', 'bodybuilding', 'photography', 'cloud architecture'],
+  description: 'Software Engineer and Posing Coach. Building software, building physiques, building things that matter.',
+  keywords: ['software engineer', 'posing coach', 'bodybuilding', 'cloud architecture'],
 }
 
 export default function RootLayout({ children }) {
