@@ -104,8 +104,8 @@ export default function Engineering() {
                   Building an AI-powered physique analysis platform for
                   competitive bodybuilders and coaches. Solo-engineered the full
                   stack: two web apps, two mobile apps, 23 serverless Lambda
-                  handlers, and full AWS infrastructure. Fine-tuning Llama 3.2
-                  Vision 11B on 8,269 labeled competition photos across 10 NPC
+                  handlers, and full AWS infrastructure. Fine-tuning Llama 4 Scout 17B-16E
+                  on 8,269 labeled competition photos across 10 NPC
                   divisions.
                 </p>
                 <div className='flex flex-wrap gap-2'>
@@ -118,7 +118,7 @@ export default function Engineering() {
                     'DynamoDB',
                     'Lambda',
                     'SageMaker',
-                    'Llama 3.2 Vision',
+                    'Llama 4 Scout',
                     'Stripe',
                   ].map((tech) => (
                     <span
