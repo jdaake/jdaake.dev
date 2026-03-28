@@ -101,12 +101,13 @@ export default function Engineering() {
                   </span>
                 </div>
                 <p className='text-white/70 leading-relaxed mb-6'>
-                  Building an AI-powered physique analysis platform for
-                  competitive bodybuilders and coaches. Solo-engineered the full
-                  stack: two web apps, two mobile apps, 23 serverless Lambda
-                  handlers, and full AWS infrastructure. Fine-tuning Llama 4 Scout 17B-16E
-                  on 8,269 labeled competition photos across 10 NPC
-                  divisions.
+                  AI-powered physique analysis platform for competitive
+                  bodybuilders and coaches. Solo-engineered the full stack: two
+                  Next.js web apps, two React Native mobile apps, 23 serverless
+                  Lambda handlers, and full AWS infrastructure via CDK.
+                  Fine-tuning Llama 4 Scout 17B-16E (MoE) with QLoRA on
+                  SageMaker using 7,000+ labeled competition photos across 11
+                  NPC divisions for custom physique evaluation.
                 </p>
                 <div className='flex flex-wrap gap-2'>
                   {[
