@@ -101,13 +101,17 @@ export default function Engineering() {
                   </span>
                 </div>
                 <p className='text-white/70 leading-relaxed mb-6'>
-                  AI-powered physique analysis platform for competitive
-                  bodybuilders and coaches. Solo-engineered the full stack: two
-                  Next.js web apps, two React Native mobile apps, 23 serverless
-                  Lambda handlers, and full AWS infrastructure via CDK.
-                  Fine-tuning Llama 4 Scout 17B-16E (MoE) with QLoRA on
-                  SageMaker using 7,000+ labeled competition photos across 11
-                  NPC divisions for custom physique evaluation.
+                  AI-powered physique analysis platform serving competitive
+                  bodybuilders (PhysiqueIQ) and general fitness athletes
+                  (ProgressIQ) on a shared engine. Solo-engineered the full
+                  stack: two Next.js web apps, two React Native mobile apps,
+                  specialized Lambda handlers for async workloads, and full
+                  AWS infrastructure via CDK. Production analysis runs on
+                  Anthropic Claude (Sonnet + Opus) with prompt caching and
+                  8-tier RBAC; in parallel, fine-tuning a custom vision model
+                  — Arete — on Llama 3.2 Vision 11B with QLoRA on SageMaker,
+                  trained on 7,019 labeled competition photos across 11 NPC
+                  divisions for domain-specific physique evaluation.
                 </p>
                 <div className='flex flex-wrap gap-2'>
                   {[
@@ -119,8 +123,11 @@ export default function Engineering() {
                     'DynamoDB',
                     'Lambda',
                     'SageMaker',
-                    'Llama 4 Scout',
+                    'Anthropic Claude',
+                    'Llama 3.2 Vision',
+                    'QLoRA',
                     'Stripe',
+                    'Cognito',
                   ].map((tech) => (
                     <span
                       key={tech}
