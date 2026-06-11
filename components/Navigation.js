@@ -2,88 +2,87 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const navItems = [
+  { name: 'Engineering', href: '/engineering', no: '01' },
+  { name: 'Coaching', href: '/coaching', no: '02' },
+  { name: 'About', href: '/about', no: '03' },
+];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: 'Engineering', href: '/engineering' },
-    { name: 'Coaching', href: '/coaching' },
-    // { name: 'Photography', href: '/photography' },
-    { name: 'About', href: '/about' },
-  ];
+  const pathname = usePathname();
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 bg-dark-900/80 backdrop-blur-md border-b border-dark-800/50'>
-      <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-        <div className='flex items-center justify-between h-20'>
-          {/* Logo */}
+    <header className='sticky top-0 z-50 bg-paper border-b border-line'>
+      <nav className='max-w-7xl mx-auto px-6 lg:px-10'>
+        <div className='flex items-stretch justify-between h-16'>
+          {/* Wordmark */}
           <Link
             href='/'
-            className='font-display text-2xl tracking-wider text-white hover:text-gold-500 transition-colors'
+            className='flex items-center gap-3 group'
+            onClick={() => setIsOpen(false)}
           >
-            JDAAKE
+            <span className='w-2.5 h-2.5 bg-red group-hover:rotate-45 transition-transform duration-300' />
+            <span className='display text-2xl tracking-tight'>
+              Jordan Daake
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className='nav-link font-body text-sm tracking-wide uppercase'
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Desktop links */}
+          <div className='hidden md:flex items-stretch'>
+            {navItems.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`label flex items-center gap-2 px-6 border-l border-line transition-colors duration-200 ${
+                    active
+                      ? 'bg-ink text-paper'
+                      : 'text-ink hover:bg-paper-2'
+                  }`}
+                >
+                  <span className={active ? 'text-red' : 'text-ink-2'}>
+                    {item.no}
+                  </span>
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className='md:hidden text-white p-2'
+            className='md:hidden flex items-center px-2 -mr-2'
             aria-label='Toggle menu'
+            aria-expanded={isOpen}
           >
-            <div className='w-6 h-5 relative flex flex-col justify-between'>
-              <span
-                className={`w-full h-0.5 bg-current transform transition-all duration-300 ${
-                  isOpen ? 'rotate-45 translate-y-2' : ''
-                }`}
-              />
-              <span
-                className={`w-full h-0.5 bg-current transition-all duration-300 ${
-                  isOpen ? 'opacity-0' : ''
-                }`}
-              />
-              <span
-                className={`w-full h-0.5 bg-current transform transition-all duration-300 ${
-                  isOpen ? '-rotate-45 -translate-y-2' : ''
-                }`}
-              />
-            </div>
+            <span className='label'>{isOpen ? 'Close' : 'Menu'}</span>
           </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-64 border-t border-dark-800/50' : 'max-h-0'
+          isOpen ? 'max-h-72 border-t border-line' : 'max-h-0'
         }`}
       >
-        <div className='px-6 py-4 space-y-4 bg-dark-900/95'>
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className='block text-white/70 hover:text-gold-500 font-body text-sm tracking-wide uppercase transition-colors'
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            onClick={() => setIsOpen(false)}
+            className='flex items-baseline gap-4 px-6 py-4 border-b border-line last:border-b-0 hover:bg-paper-2 transition-colors'
+          >
+            <span className='label text-red'>{item.no}</span>
+            <span className='display text-2xl'>{item.name}</span>
+          </Link>
+        ))}
       </div>
-    </nav>
+    </header>
   );
 }

@@ -1,316 +1,236 @@
 import Navigation from '@/components/Navigation';
-import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Reveal from '@/components/motion/Reveal';
 
 export const metadata = {
-  title: 'Engineering | Jordan Daake',
+  title: 'Engineering — Jordan Daake',
   description:
-    'Software Engineer specializing in cloud architecture, healthcare tech, and AI-powered systems.',
+    'Software engineer specializing in cloud architecture, healthcare tech, and AI-powered systems.',
 };
+
+const skills = [
+  'C#/.NET',
+  'AWS',
+  'Azure',
+  'TypeScript',
+  'Python',
+  'SQL',
+  'Angular',
+  'LLM/AI',
+  'React Native',
+  'Next.js',
+  'Cloud Architecture',
+  'Data Engineering',
+  'Healthcare Tech',
+  'FinTech',
+];
+
+const roles = [
+  {
+    no: '01',
+    company: 'PhysiqueIQ.ai',
+    title: 'Founder & Solo Engineer',
+    dates: 'Mar 2026 — Present',
+    body: `AI-powered physique analysis platform serving competitive bodybuilders
+      (PhysiqueIQ) and general fitness athletes (ProgressIQ) on a shared engine.
+      Solo-engineered the full stack: two Next.js web apps, two React Native
+      mobile apps, specialized Lambda handlers for async workloads, and full AWS
+      infrastructure via CDK. Production analysis runs on Anthropic Claude
+      (Sonnet + Opus) with prompt caching and 8-tier RBAC; in parallel,
+      fine-tuning a custom vision model — Arete — on Llama 3.2 Vision 11B with
+      QLoRA on SageMaker, trained on 7,019 labeled competition photos across 11
+      NPC divisions for domain-specific physique evaluation.`,
+    stack: [
+      'Next.js',
+      'React Native',
+      'TypeScript',
+      'Python',
+      'AWS CDK',
+      'DynamoDB',
+      'Lambda',
+      'SageMaker',
+      'Anthropic Claude',
+      'Llama 3.2 Vision',
+      'QLoRA',
+      'Stripe',
+      'Cognito',
+    ],
+  },
+  {
+    no: '02',
+    company: 'Navitus Health Solutions',
+    title: 'Senior Software Engineer',
+    dates: 'Feb 2026 — Present',
+    body: `Building event-driven ETL pipelines for pharmacy formulary data
+      processing. Designing data ingestion, enrichment, and delivery systems
+      that handle drug formulary data across the RxFlex integration platform.`,
+    stack: [
+      'C#/.NET',
+      'AWS CDK',
+      'EventBridge',
+      'Lambda',
+      'S3',
+      'Aurora PostgreSQL',
+      'Data Engineering',
+    ],
+  },
+  {
+    no: '03',
+    company: 'Invene',
+    title: 'Software Engineer',
+    dates: 'Aug 2025 — Jan 2026',
+    body: `Built IRIS, a medication refill automation system that processes
+      prescription refill requests through AI-powered validation workflows.
+      The system integrates with multiple healthcare APIs including Athena
+      Health EHR and the FDB drug database.`,
+    stack: [
+      'C#/.NET',
+      'Azure OpenAI',
+      'Multi-Agent LLM',
+      'Athena Health API',
+      'SQL Server',
+    ],
+  },
+  {
+    no: '04',
+    company: 'Orion',
+    title: 'Software Engineer · Developer II · Security & Performance · SQL',
+    dates: 'Sep 2023 — May 2025 · Sep 2018 — Mar 2022',
+    body: `Built and maintained enterprise software solutions using .NET and
+      Angular. Worked with AWS cloud infrastructure and SQL databases, with
+      monitoring through DataDog.`,
+    stack: ['C#/.NET', 'Angular', 'AWS', 'SQL', 'DataDog'],
+  },
+  {
+    no: '05',
+    company: 'NBC Sports Next',
+    title: 'Software Engineer',
+    dates: 'Mar 2022 — Aug 2024',
+    body: `Developed features for sports technology platforms serving millions
+      of users. Built and maintained a TypeScript library for customer data
+      tracking. Architected cloud solutions on AWS.`,
+    stack: ['Angular', 'TypeScript', 'AWS', 'Ruby'],
+  },
+];
 
 export default function Engineering() {
   return (
     <>
       <Navigation />
 
-      <main className='pt-20'>
+      <main>
         {/* Hero */}
-        <section className='py-24 lg:py-32'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <div className='max-w-3xl'>
-              <h1 className='font-display text-6xl md:text-7xl lg:text-8xl tracking-wide text-white mb-6'>
-                SOFTWARE <span className='gold-text'>ENGINEER</span>
-              </h1>
-              <p className='text-white/60 text-xl leading-relaxed mb-8'>
-                Building scalable cloud solutions in healthcare and beyond.
-                Specializing in .NET, AWS/Azure, and AI-powered automation
-                systems.
+        <section className='max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-16 lg:pt-24 lg:pb-20'>
+          <p className='label text-ink-2 rise rise-1'>
+            Section 01 — The Day Job
+          </p>
+
+          <h1 className='display text-[15vw] lg:text-[9.5rem] mt-6 rise rise-2'>
+            Software
+            <br />
+            Engineer<span className='text-red'>.</span>
+          </h1>
+
+          <div className='mt-10 grid lg:grid-cols-12 gap-8 rise rise-3'>
+            <p className='lg:col-span-6 serif-body text-xl leading-relaxed'>
+              Building scalable cloud solutions in healthcare and beyond.
+              Specializing in .NET, AWS/Azure, and AI-powered automation
+              systems.
+            </p>
+
+            <div className='lg:col-span-6'>
+              <p className='label text-ink-2 mb-3'>Toolkit</p>
+              <p className='font-mono text-xs leading-loose text-ink'>
+                {skills.join('  ·  ')}
               </p>
-              <div className='flex flex-wrap gap-3'>
-                {[
-                  'C#/.NET',
-                  'AWS',
-                  'Azure',
-                  'TypeScript',
-                  'Python',
-                  'SQL',
-                  'Angular',
-                  'LLM/AI',
-                  'React Native',
-                  'Next.js',
-                  'Cloud Architecture',
-                  'Data Engineering',
-                  'Healthcare Tech',
-                  'FinTech',
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className='px-4 py-2 bg-dark-800 border border-dark-700 rounded text-white/70 text-sm'
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Certifications */}
-        <section className='py-16 bg-dark-800/30'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <div className='flex flex-wrap items-center gap-8'>
-              <span className='text-white/50 text-sm uppercase tracking-wider'>
-                Certified
-              </span>
-              <div className='flex flex-wrap gap-6'>
-                <div className='flex items-center gap-2 text-white/70'>
-                  <div className='w-8 h-8 bg-gold-500/20 rounded flex items-center justify-center'>
-                    <span className='text-gold-500 text-xs font-bold'>AWS</span>
-                  </div>
-                  Solutions Architect
-                </div>
-                <div className='flex items-center gap-2 text-white/70'>
-                  <div className='w-8 h-8 bg-gold-500/20 rounded flex items-center justify-center'>
-                    <span className='text-gold-500 text-xs font-bold'>AWS</span>
-                  </div>
-                  Developer Associate
-                </div>
-              </div>
-            </div>
+        {/* Certifications strip */}
+        <div className='border-y border-line bg-paper-2'>
+          <div className='max-w-7xl mx-auto px-6 lg:px-10 py-4 flex flex-wrap items-center gap-x-8 gap-y-2'>
+            <span className='label text-red'>Certified ✶</span>
+            <span className='label text-ink'>AWS Solutions Architect</span>
+            <span className='label text-ink'>AWS Developer Associate</span>
           </div>
-        </section>
+        </div>
 
-        {/* Experience */}
-        <section className='py-24 lg:py-32'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <h2 className='font-display text-4xl tracking-wide text-white mb-12'>
-              RECENT <span className='gold-text'>WORK</span>
-            </h2>
+        {/* Experience ledger */}
+        <section className='max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-24 lg:pt-24 lg:pb-32'>
+          <Reveal className='flex flex-wrap items-baseline gap-4 mb-12'>
+            <h2 className='display text-5xl lg:text-7xl'>The Record</h2>
+            <span className='leaders hidden sm:block' />
+            <p className='label text-ink-2'>2018 — Present</p>
+          </Reveal>
 
-            <div className='space-y-8'>
-              {/* PhysiqueIQ */}
-              <div className='card p-8'>
-                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
-                  <div>
-                    <h3 className='font-display text-2xl text-white mb-1'>
-                      PHYSIQUEIQ.AI
-                    </h3>
-                    <p className='text-gold-500'>Founder & Solo Engineer</p>
+          <div className='rule-heavy'>
+            {roles.map((role, i) => (
+              <Reveal key={role.no} delay={i === 0 ? 0 : 80}>
+                <article className='grid lg:grid-cols-12 gap-4 lg:gap-8 py-10 lg:py-12 border-b border-line'>
+                  <div className='lg:col-span-1'>
+                    <p className='label text-red'>{role.no}</p>
                   </div>
-                  <span className='text-white/50 text-sm'>
-                    March 2026 - Present
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  AI-powered physique analysis platform serving competitive
-                  bodybuilders (PhysiqueIQ) and general fitness athletes
-                  (ProgressIQ) on a shared engine. Solo-engineered the full
-                  stack: two Next.js web apps, two React Native mobile apps,
-                  specialized Lambda handlers for async workloads, and full
-                  AWS infrastructure via CDK. Production analysis runs on
-                  Anthropic Claude (Sonnet + Opus) with prompt caching and
-                  8-tier RBAC; in parallel, fine-tuning a custom vision model
-                  — Arete — on Llama 3.2 Vision 11B with QLoRA on SageMaker,
-                  trained on 7,019 labeled competition photos across 11 NPC
-                  divisions for domain-specific physique evaluation.
-                </p>
-                <div className='flex flex-wrap gap-2'>
-                  {[
-                    'Next.js',
-                    'React Native',
-                    'TypeScript',
-                    'Python',
-                    'AWS CDK',
-                    'DynamoDB',
-                    'Lambda',
-                    'SageMaker',
-                    'Anthropic Claude',
-                    'Llama 3.2 Vision',
-                    'QLoRA',
-                    'Stripe',
-                    'Cognito',
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
-              {/* Navitus */}
-              <div className='card p-8'>
-                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
-                  <div>
-                    <h3 className='font-display text-2xl text-white mb-1'>
-                      NAVITUS HEALTH SOLUTIONS
+                  <div className='lg:col-span-4'>
+                    <h3 className='display text-3xl lg:text-4xl'>
+                      {role.company}
                     </h3>
-                    <p className='text-gold-500'>Senior Software Engineer</p>
+                    <p className='font-mono text-xs text-ink-2 mt-2 leading-relaxed'>
+                      {role.title}
+                    </p>
+                    <p className='label text-ink-2 mt-3'>{role.dates}</p>
                   </div>
-                  <span className='text-white/50 text-sm'>
-                    February 2026 - Present
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  Building event-driven ETL pipelines for pharmacy formulary
-                  data processing. Designing data ingestion, enrichment, and
-                  delivery systems that handle drug formulary data across the
-                  RxFlex integration platform.
-                </p>
-                <div className='flex flex-wrap gap-2'>
-                  {[
-                    'C#/.NET',
-                    'AWS CDK',
-                    'EventBridge',
-                    'Lambda',
-                    'S3',
-                    'Aurora PostgreSQL',
-                    'Data Engineering',
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
-              {/* Invene */}
-              <div className='card p-8'>
-                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
-                  <div>
-                    <h3 className='font-display text-2xl text-white mb-1'>
-                      INVENE
-                    </h3>
-                    <p className='text-gold-500'>Software Engineer</p>
-                  </div>
-                  <span className='text-white/50 text-sm'>
-                    August 2025 - January 2026
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  Building IRIS, a medication refill automation system that
-                  processes prescription refill requests through AI-powered
-                  validation workflows. The system integrates with multiple
-                  healthcare APIs including Athena Health EHR and FDB drug
-                  database.
-                </p>
-                <div className='flex flex-wrap gap-2'>
-                  {[
-                    'C#/.NET',
-                    'Azure OpenAI',
-                    'Multi-Agent LLM',
-                    'Athena Health API',
-                    'SQL Server',
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Orion */}
-              <div className='card p-8'>
-                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
-                  <div>
-                    <h3 className='font-display text-2xl text-white mb-1'>
-                      ORION
-                    </h3>
-                    <p className='text-gold-500'>
-                      Software Engineer | Software Developer II | Security &
-                      Performance Engineer | SQL Developer
+                  <div className='lg:col-span-7'>
+                    <p className='serif-body text-ink'>{role.body}</p>
+                    <p className='font-mono text-[11px] leading-loose text-red mt-4'>
+                      {role.stack.join(' / ')}
                     </p>
                   </div>
-                  <span className='text-white/50 text-sm'>
-                    September 2023 - May 2025 | September 2018 - March 2022
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  Built and maintained enterprise software solutions using .NET
-                  and Angular. Worked with AWS cloud infrastructure and SQL
-                  databases, with monitoring through DataDog.
-                </p>
-                <div className='flex flex-wrap gap-2'>
-                  {['C#/.NET', 'Angular', 'AWS', 'SQL', 'DataDog'].map(
-                    (tech) => (
-                      <span
-                        key={tech}
-                        className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                      >
-                        {tech}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
-
-              {/* NBC */}
-              <div className='card p-8'>
-                <div className='flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6'>
-                  <div>
-                    <h3 className='font-display text-2xl text-white mb-1'>
-                      NBC SPORTS NEXT
-                    </h3>
-                    <p className='text-gold-500'>Software Engineer</p>
-                  </div>
-                  <span className='text-white/50 text-sm'>
-                    March 2022 - August 2024
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed mb-6'>
-                  Developed features for sports technology platforms serving
-                  millions of users. Built and maintained a TypeScript library
-                  for customer data tracking. Architected cloud solutions on
-                  AWS.
-                </p>
-                <div className='flex flex-wrap gap-2'>
-                  {['Angular', 'TypeScript', 'AWS', 'Ruby'].map((tech) => (
-                    <span
-                      key={tech}
-                      className='px-3 py-1 bg-gold-500/10 border border-gold-500/20 rounded text-gold-500/80 text-xs'
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section className='py-24 lg:py-32 bg-dark-800/30'>
-          <div className='max-w-4xl mx-auto px-6 lg:px-8 text-center'>
-            <h2 className='font-display text-4xl tracking-wide text-white mb-6'>
-              LET'S <span className='gold-text'>CONNECT</span>
-            </h2>
-            <p className='text-white/60 mb-8'>
-              Open to discussing new opportunities, interesting projects, or
-              just talking tech.
-            </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+        <section className='bg-ink text-paper'>
+          <div className='max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-28'>
+            <Reveal>
+              <p className='display text-5xl sm:text-6xl lg:text-8xl max-w-4xl'>
+                Let's build something
+                <span className='text-red'> worth shipping.</span>
+              </p>
+            </Reveal>
+            <Reveal delay={150}>
+              <p className='serif-body text-paper/70 max-w-xl mt-8'>
+                Open to discussing new opportunities, interesting projects, or
+                just talking tech.
+              </p>
+            </Reveal>
+            <Reveal delay={250} className='flex flex-wrap gap-3 mt-10'>
               <a
                 href='https://linkedin.com/in/jdaake'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='btn-primary'
+                className='btn-paper'
               >
-                Connect on LinkedIn
+                Connect on LinkedIn ↗
               </a>
-              <a href='/resume/resume.pdf' download className='btn-outline'>
-                Download Resume
+              <a
+                href='/resume/resume.pdf'
+                download
+                className='btn-paper'
+              >
+                Download Résumé ↓
               </a>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }

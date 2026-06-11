@@ -1,212 +1,214 @@
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import Image from 'next/image';
-import CalendlyEmbed from '@/components/CalendlyEmbed';
+import Reveal from '@/components/motion/Reveal';
+import CountUp from '@/components/motion/CountUp';
 
 export const metadata = {
-  title: 'Posing Coaching | Jordan Daake',
+  title: 'Posing Coaching — Jordan Daake',
   description:
     'Bodybuilding posing coach helping athletes present their best physique on stage.',
 };
+
+const stats = [
+  { value: '10', suffix: '+', label: 'Years Competing' },
+  { value: 'Top 5', suffix: '', label: 'National Placings' },
+  { value: "6'3\"", suffix: '', label: 'Classic Physique' },
+];
+
+const services = [
+  {
+    no: '01',
+    title: 'Virtual Sessions',
+    body: `One-on-one video sessions where we work through your mandatory
+      poses, transitions, and stage presence. Real-time feedback and
+      corrections.`,
+    includes: ['Live video coaching', 'Pose-by-pose breakdown', 'Recording for review'],
+  },
+  {
+    no: '02',
+    title: 'Video Critique',
+    body: `Send me your posing videos and I'll provide detailed written and
+      video feedback on what's working and what needs work.`,
+    includes: ['Detailed analysis', 'Priority improvements', 'Follow-up support'],
+  },
+];
 
 export default function Coaching() {
   return (
     <>
       <Navigation />
 
-      <main className='pt-20'>
+      <main>
         {/* Hero */}
-        <section className='py-24 lg:py-32'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <div className='grid lg:grid-cols-2 gap-12 items-center'>
-              <div>
-                <h1 className='font-display text-6xl md:text-7xl tracking-wide text-white mb-6'>
-                  POSING <span className='gold-text'>COACH</span>
-                </h1>
-                <p className='text-white/60 text-xl leading-relaxed mb-8'>
-                  Your physique tells a story. Make sure the judges hear it. I
-                  help bodybuilders present their best on stage through refined
-                  posing and stage presence.
-                </p>
-                <a href='#booking' className='btn-primary'>
-                  Book a Session
+        <section className='max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-16 lg:pt-24 lg:pb-20'>
+          <p className='label text-ink-2 rise rise-1'>
+            Section 02 — The Stage
+          </p>
+
+          <div className='grid lg:grid-cols-12 gap-10 items-end'>
+            <div className='lg:col-span-7'>
+              <h1 className='display text-[15vw] lg:text-[9.5rem] mt-6 rise rise-2'>
+                Posing
+                <br />
+                Coach <span className='text-red'>✶</span>
+              </h1>
+
+              <p className='serif-body text-xl leading-relaxed mt-10 max-w-xl rise rise-3'>
+                Your physique tells a story —{' '}
+                <em className='text-red'>make sure the judges hear it.</em> I
+                help bodybuilders present their best on stage through refined
+                posing and stage presence.
+              </p>
+
+              <div className='mt-10 rise rise-4'>
+                <a href='#booking' className='btn-ink'>
+                  Book a Session →
                 </a>
               </div>
+            </div>
 
-              {/* Logo */}
-              <div className='flex justify-center lg:justify-end'>
-                <div className='relative w-80 h-80'>
-                  <Image
-                    src='/images/jdaake-posing-logo.png'
-                    alt='JDaake Posing'
-                    fill
-                    className='object-contain'
-                    priority
-                  />
-                </div>
+            {/* Stage photo */}
+            <div className='lg:col-span-5 rise rise-4'>
+              <div className='print-photo border border-line'>
+                <Image
+                  src='/images/jdaake_posing.PNG'
+                  alt='Jordan Daake posing on stage'
+                  width={600}
+                  height={800}
+                  priority
+                  className='w-full h-auto'
+                />
               </div>
+              <p className='label text-ink-2 mt-3'>
+                Fig. 1 — Front double bicep, national stage
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Credibility */}
-        <section className='py-16 bg-dark-800/30'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <div className='grid sm:grid-cols-3 gap-8 text-center'>
-              <div>
-                <div className='font-display text-4xl text-gold-500 mb-2'>
-                  10+
-                </div>
-                <div className='text-white/60'>Years Competing</div>
+        {/* Scorecard strip */}
+        <div className='border-y border-line bg-ink text-paper'>
+          <div className='max-w-7xl mx-auto grid sm:grid-cols-3'>
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`px-6 lg:px-10 py-8 text-center sm:text-left ${
+                  i > 0 ? 'sm:border-l border-line-light' : ''
+                }`}
+              >
+                <CountUp
+                  value={stat.value + stat.suffix}
+                  className='display text-5xl text-paper'
+                />
+                <p className='label text-paper/50 mt-2'>{stat.label}</p>
               </div>
-              <div>
-                <div className='font-display text-4xl text-gold-500 mb-2'>
-                  TOP 5
-                </div>
-                <div className='text-white/60'>National Placings</div>
-              </div>
-              <div>
-                <div className='font-display text-4xl text-gold-500 mb-2'>
-                  6'3"
-                </div>
-                <div className='text-white/60'>Classic Physique</div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
 
-        {/* Photo */}
-        <section className='pt-24 pb-12 lg:pt-32 lg:pb-16'>
-          <div className='max-w-4xl mx-auto px-6 lg:px-8 flex justify-center'>
-            <div className='rounded-lg overflow-hidden bg-dark-800'>
-              <Image
-                src='/images/jdaake_posing.png'
-                alt='Jordan Daake posing on stage'
-                width={600}
-                height={800}
-                className='w-auto h-auto max-h-[700px]'
-              />
-            </div>
-          </div>
-        </section>
+        {/* Story */}
+        <section className='max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-20 lg:pt-28 lg:pb-28'>
+          <div className='grid lg:grid-cols-12 gap-10'>
+            <Reveal className='lg:col-span-4'>
+              <h2 className='display text-5xl lg:text-6xl'>
+                Why I<br />
+                Coach
+              </h2>
+            </Reveal>
 
-        {/* My Story */}
-        <section className='py-12 lg:py-16'>
-          <div className='max-w-4xl mx-auto px-6 lg:px-8'>
-            <h2 className='font-display text-4xl tracking-wide text-white mb-8'>
-              MY <span className='gold-text'>STORY</span>
-            </h2>
-            <div className='space-y-6 text-white/70 leading-relaxed'>
-              <p>
-                I've been a competitive bodybuilder for over a decade. I've
-                stood on national stages, earned multiple top-5 finishes, and
-                learned what separates good physiques from winning
-                presentations.
-              </p>
-              <p>
-                The truth is, posing can make or break your placing. I've seen
-                athletes with incredible builds place lower than they should
-                because they couldn't present it. And I've seen disciplined
-                posers punch above their weight class.
-              </p>
-              <p>
-                Currently preparing for Master's Nationals 2026 with plans to
-                earn my IFBB Pro card. I coach because I want to share what I've
-                learned - the details that took me years to figure out.
-              </p>
-            </div>
+            <Reveal delay={120} className='lg:col-span-7 lg:col-start-6'>
+              <div className='space-y-6 serif-body drop-cap'>
+                <p>
+                  I've been a competitive bodybuilder for over a decade. I've
+                  stood on national stages, earned multiple top-5 finishes, and
+                  learned what separates good physiques from winning
+                  presentations.
+                </p>
+                <p>
+                  The truth is, posing can make or break your placing. I've
+                  seen athletes with incredible builds place lower than they
+                  should because they couldn't present it. And I've seen
+                  disciplined posers punch above their weight class.
+                </p>
+                <p>
+                  Currently preparing for Master's Nationals 2026 with plans to
+                  earn my IFBB Pro card. I coach because I want to share what
+                  I've learned — the details that took me years to figure out.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Services */}
-        <section className='py-24 lg:py-32 bg-dark-800/30'>
-          <div className='max-w-7xl mx-auto px-6 lg:px-8'>
-            <h2 className='font-display text-4xl tracking-wide text-white mb-12 text-center'>
-              WHAT I <span className='gold-text'>OFFER</span>
-            </h2>
+        <section className='border-t border-line bg-paper-2'>
+          <div className='max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28'>
+            <Reveal className='flex flex-wrap items-baseline gap-4 mb-12'>
+              <h2 className='display text-5xl lg:text-7xl'>The Offer</h2>
+              <span className='leaders hidden sm:block' />
+              <p className='label text-ink-2'>Two formats</p>
+            </Reveal>
 
-            <div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
-              <div className='card p-8'>
-                <h3 className='font-display text-2xl text-white mb-4'>
-                  VIRTUAL SESSIONS
-                </h3>
-                <p className='text-white/60 mb-6'>
-                  One-on-one video sessions where we work through your mandatory
-                  poses, transitions, and stage presence. Real-time feedback and
-                  corrections.
-                </p>
-                <ul className='space-y-2 text-white/70 text-sm'>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Live video coaching
-                  </li>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Pose-by-pose
-                    breakdown
-                  </li>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Recording for
-                    review
-                  </li>
-                </ul>
-              </div>
-
-              <div className='card p-8'>
-                <h3 className='font-display text-2xl text-white mb-4'>
-                  VIDEO CRITIQUE
-                </h3>
-                <p className='text-white/60 mb-6'>
-                  Send me your posing videos and I'll provide detailed written
-                  and video feedback on what's working and what needs work.
-                </p>
-                <ul className='space-y-2 text-white/70 text-sm'>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Detailed analysis
-                  </li>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Priority
-                    improvements
-                  </li>
-                  <li className='flex items-center gap-2'>
-                    <span className='text-gold-500'>✓</span> Follow-up support
-                  </li>
-                </ul>
-              </div>
+            <div className='grid md:grid-cols-2 border-t border-l border-line'>
+              {services.map((service, i) => (
+                <Reveal
+                  key={service.no}
+                  delay={i * 120}
+                  className='border-r border-b border-line bg-paper p-8 lg:p-12'
+                >
+                  <p className='label text-red mb-6'>{service.no}</p>
+                  <h3 className='display text-4xl mb-5'>{service.title}</h3>
+                  <p className='serif-body text-ink-2 mb-8'>{service.body}</p>
+                  <ul className='space-y-3'>
+                    {service.includes.map((item) => (
+                      <li key={item} className='label flex items-center gap-3'>
+                        <span className='text-red'>✶</span> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Booking */}
-        <section id='booking' className='py-24 lg:py-32'>
-          <div className='max-w-4xl mx-auto px-6 lg:px-8'>
-            <h2 className='font-display text-4xl tracking-wide text-white mb-8 text-center'>
-              BOOK A <span className='gold-text'>SESSION</span>
-            </h2>
-            <p className='text-white/60 text-center mb-12 max-w-2xl mx-auto'>
-              Ready to take your posing to the next level? Book a session below
-              or reach out on Instagram to discuss your goals.
-            </p>
+        <section id='booking' className='bg-ink text-paper border-t border-line'>
+          <div className='max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32'>
+            <Reveal>
+              <p className='label text-red mb-8'>Booking</p>
+            </Reveal>
 
-            {/* Calendly Embed */}
-            <div className='card overflow-hidden'>
-              <CalendlyEmbed url='https://calendly.com/jdaake-coaching/30min' />
-            </div>
-          </div>
-        </section>
+            <Reveal delay={100}>
+              <p className='display text-5xl sm:text-6xl lg:text-8xl max-w-4xl'>
+                Ready to own
+                <span className='text-red'> the stage?</span>
+              </p>
+            </Reveal>
 
-        {/* Contact Alternative */}
-        <section className='py-16 bg-dark-800/30'>
-          <div className='max-w-4xl mx-auto px-6 lg:px-8 text-center'>
-            <p className='text-white/60 mb-4'>Prefer to chat first?</p>
-            <a
-              href='https://instagram.com/j.daake'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='btn-outline'
-            >
-              DM on Instagram
-            </a>
+            <Reveal delay={200}>
+              <p className='serif-body text-paper/70 max-w-xl mt-8'>
+                DM me on Instagram with your division, show date, and goals —
+                we'll figure out the right format and get you scheduled.
+              </p>
+            </Reveal>
+
+            <Reveal delay={300} className='mt-10'>
+              <a
+                href='https://instagram.com/j.daake'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn-paper'
+              >
+                DM on Instagram ↗
+              </a>
+            </Reveal>
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }
