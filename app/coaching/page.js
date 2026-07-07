@@ -7,12 +7,12 @@ import CountUp from '@/components/motion/CountUp';
 export const metadata = {
   title: 'Posing Coaching — Jordan Daake',
   description:
-    'Bodybuilding posing coach helping athletes present their best physique on stage.',
+    'IFBB Pro posing coach helping athletes present their best physique on stage.',
 };
 
 const stats = [
   { value: '10', suffix: '+', label: 'Years Competing' },
-  { value: 'Top 5', suffix: '', label: 'National Placings' },
+  { value: 'IFBB', suffix: '', label: 'Pro Card, 2026' },
   { value: "6'3\"", suffix: '', label: 'Classic Physique' },
 ];
 
@@ -132,9 +132,10 @@ export default function Coaching() {
                   disciplined posers punch above their weight class.
                 </p>
                 <p>
-                  Currently preparing for Master's Nationals 2026 with plans to
-                  earn my IFBB Pro card. I coach because I want to share what
-                  I've learned — the details that took me years to figure out.
+                  In July 2026 I earned my IFBB Pro card, winning the Masters
+                  35+ Classic Physique class at NPC Universe. I coach because I
+                  want to share what got me there — the details that took me
+                  years to figure out.
                 </p>
               </div>
             </Reveal>

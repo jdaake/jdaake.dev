@@ -11,7 +11,7 @@ const marqueeItems = [
   'Posing Coach',
   'Classic Physique',
   'Cloud Architecture',
-  'National Competitor',
+  'IFBB Pro',
   'AWS Certified',
 ];
 
@@ -28,7 +28,7 @@ const index = [
     title: 'Posing Coach',
     href: '/coaching',
     blurb:
-      'Stage presentation for competitive bodybuilders, from a national-level competitor.',
+      'Stage presentation for competitive bodybuilders, from an IFBB Pro.',
   },
   {
     no: '03',
@@ -40,9 +40,9 @@ const index = [
 
 const facts = [
   { value: "6'3\"", label: 'Classic Physique' },
-  { value: 'Top 5', label: 'National Placings' },
+  { value: 'IFBB', label: 'Pro, Classic Physique' },
   { value: '2', label: 'AWS Certifications' },
-  { value: "July '26", label: "Master's Nationals" },
+  { value: '10+', label: 'Years Competing' },
 ];
 
 export default function Home() {
@@ -154,7 +154,7 @@ export default function Home() {
 
             <Reveal delay={200}>
               <p className='serif-body text-paper/70 max-w-2xl mt-10'>
-                Competitive Classic Physique bodybuilder. Former college
+                IFBB Pro Classic Physique bodybuilder. Former college
                 basketball player. Sneaker collector. Guided by Stoic
                 philosophy. The same philosophy runs through everything —
                 shipped code and stage-ready physiques alike.

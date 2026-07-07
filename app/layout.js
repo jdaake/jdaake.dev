@@ -4,7 +4,7 @@ export const metadata = {
   metadataBase: new URL('https://jdaake.dev'),
   title: 'Jordan Daake — Engineer & Posing Coach',
   description:
-    'Software engineer and national-level Classic Physique competitor. Building cloud systems by day, coaching stage presentation by night.',
+    'Software engineer and IFBB Pro Classic Physique competitor. Building cloud systems by day, coaching stage presentation by night.',
   keywords: [
     'software engineer',
     'posing coach',
