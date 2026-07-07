@@ -140,7 +140,7 @@ export default function About() {
                 <Reveal delay={120}>
                   <div className='space-y-6 serif-body'>
                     <p>
-                      IFBB Pro, Classic Physique. 6'3", competing at the 239
+                      IFBB Pro, Classic Physique. 6'3", competing at the 249
                       lb cap. A decade of national-level competition and
                       multiple top-5 finishes led to July 2026, when I won the
                       Masters 35+ Classic Physique class at NPC Universe and
@@ -163,7 +163,7 @@ export default function About() {
                   <div className='mt-10 grid grid-cols-3 border-t border-l border-line'>
                     {[
                       { value: "6'3\"", label: 'Height' },
-                      { value: '239', label: 'Weight Cap' },
+                      { value: '249', label: 'Weight Cap' },
                       { value: 'Pro', label: 'IFBB, 2026' },
                     ].map((stat) => (
                       <div
